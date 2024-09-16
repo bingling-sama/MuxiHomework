@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Muxi Homework 2</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		.close {
+			position: absolute;
+			top: .5rem;
+			right: 1rem;
+			font-weight: bolder;
+			cursor: pointer;
+		}
+
+		input,
+		select,
+		textarea {
+			border: 1px solid #e3e3e3;
+			border-radius: 6px;
+		}
+
+		textarea {
+			resize: none;
+		}
+
+		label {
+			font-weight: bold;
+		}
+
+		button {
+			border-radius: 6px;
+			width: 6rem;
+			height: 2rem;
+			background-color: #1389e4 !important;
+			color: white !important;
+		}
+
+		form>div {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 20px;
+		}
+
+		body {
+			height: 100vh;
+			font-family: "Noto Sans SC", sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f0f0f0;
+		}
+	</style>
+	<script>
+		function toggleForm() {
+			var button = document.getElementById("toggle");
+			var form = document.getElementById("card");
+			button.classList.toggle("hidden");
+			form.classList.toggle("hidden");
+		}
+		function resetForm() {
+			document.getElementById("form").reset();
+		}
+		function submitForm() {
+			alert("You have submitted the form");
+		}
+	</script>
+</head>
+
+<body>
+	<div class="flex flex-col gap-2 justify-center items-center h-full w-full">
+		<button id="toggle" onclick="toggleForm()">报名</button>
+		<div id="card"
+			class="hidden relative w-80 h-1/2 bg-white rounded-2xl text-center flex flex-col justify-center gap-6 min-h-96 shadow-lg">
+			<span class="close hover:shadow-lg" onclick="toggleForm()">X</span>
+			<h1 class="text-3xl w-full font-bold">Form🤗</h1>
+			<form id="form" class="grid gap-2 justify-items-strech">
+				<div>
+					<label>姓名：</label>
+					<input type="text" class="shadow-sm" />
+				</div>
+				<div>
+					<label>学号：</label>
+					<input type="password" class="shadow-sm" />
+				</div>
+				<div>
+					<label>性别:</label>
+					<div>
+						<input type="radio" checked>
+						<label for="female">女</label>
+					</div>
+					<div>
+						<input type="radio">
+						<label for="male">男</label>
+					</div>
+				</div>
+				<div>
+					<label>院系:</label>
+					<select class="shadow-sm">
+						<option>计算机学院</option>
+						<option>人工智能教育学部</option>
+						<option>美术学院</option>
+						<option>其他</option>
+					</select>
+				</div>
+				<div>
+					<label>唠嗑：</label>
+					<textarea style="resize: none;" class="shadow-sm"></textarea>
+				</div>
+				<div>
+					<label>求上压力😈：</label>
+					<span>不同意：</span>
+					<input type="radio" disabled>
+					<span>同意：</span>
+					<input type="radio" checked>
+				</div>
+			</form>
+			<div class="flex justify-around">
+				<button class="hover:shadow-lg" onclick="submitForm()">保存</button>
+				<button class="hover:shadow-lg" onclick="resetForm()">重置</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+</body>
+
+</html>
