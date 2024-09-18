@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Muxi Homework 2</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		body {
+			height: 100vh;
+			font-family: "Noto Sans SC", sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f0f0f0;
+		}
+	</style>
+	<script>
+		function toggleForm() {
+			var button = document.getElementById("toggle");
+			var form = document.getElementById("card");
+			button.classList.toggle("hidden");
+			form.classList.toggle("hidden");
+		}
+		function resetForm() {
+			document.getElementById("form").reset();
+		}
+		function submitForm() {
+			alert("You have submitted the form");
+		}
+	</script>
+</head>
+
+<body>
+	<div class="flex flex-col gap-2 justify-center items-center h-full w-full">
+		<button id="toggle" class="bg-sky-400 rounded-md w-20 h-8 hover:shadow-md" onclick="toggleForm()">报名</button>
+		<div id="card"
+			class="hidden relative w-80 h-1/2 bg-white rounded-2xl text-center flex flex-col justify-center gap-6 min-h-96 shadow-lg">
+			<span class="absolute top-0.5 right-1.5 cursor-pointer" onclick="toggleForm()">❌</span>
+			<h1 class="text-3xl w-full font-bold">Form🤗</h1>
+			<form id="form" class="grid gap-2 justify-items-strech [&>div]:flex [&>div]:justify-between [&>div]:px-6">
+				<div>
+					<label class="font-bold">姓名：</label>
+					<input type="text" class="rounded-md shadow-sm shadow-zinc-300" />
+				</div>
+				<div>
+					<label class="font-bold">学号：</label>
+					<input type="password" class="rounded-md shadow-sm shadow-zinc-300" />
+				</div>
+				<div>
+					<label class="font-bold">性别:</label>
+					<div>
+						<input name="gender" type="radio" checked>
+						<label class="font-bold">女</label>
+					</div>
+					<div>
+						<input name="gender" type="radio">
+						<label class="font-bold">男</label>
+					</div>
+				</div>
+				<div>
+					<label class="font-bold">院系:</label>
+					<select class="rounded-md shadow-sm shadow-zinc-300">
+						<option>计算机学院</option>
+						<option>人工智能教育学部</option>
+						<option>美术学院</option>
+						<option>其他</option>
+					</select>
+				</div>
+				<div>
+					<label class="font-bold">唠嗑：</label>
+					<textarea class="rounded-md shadow-sm shadow-zinc-300 resize-none"></textarea>
+				</div>
+				<div>
+					<label class="font-bold">求上压力😈：</label>
+					<span>不同意：</span>
+					<input type="radio" disabled>
+					<span>同意：</span>
+					<input type="radio" checked>
+				</div>
+			</form>
+			<div
+				class="flex justify-around [&>button]:bg-sky-400 [&>button]:rounded-md [&>button]:w-20 [&>button]:h-8 [&>button]:text-white">
+				<button class="hover:shadow-lg" onclick="submitForm()">保存</button>
+				<button class="hover:shadow-lg" onclick="resetForm()">重置</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+</body>
+
+</html>
