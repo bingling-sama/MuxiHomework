@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>第二题</title>
+</head>
+
+<body>
+	<h1>第二题</h1>
+	<div class="container">
+		<view class="circle"></view>
+		<view class="ripple"></view>
+	</div>
+</body>
+
+<style>
+	.circle {
+		width: 50px;
+		height: 50px;
+		background-color: #fcb9d2;
+		border-radius: 50%;
+		margin: 50px 0;
+		animation: 3s breath infinite;
+	}
+
+	.ripple {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: #fcb9d2;
+		border: 2px solid #fcb9d2;
+		animation: ripple 3s infinite ease-out;
+		box-shadow: inset 0 0 10 20 #fcb9d2;
+	}
+
+	@keyframes ripple {
+		50% {
+			scale: 3;
+			opacity: 0;
+		}
+
+		100% {
+			scale: 3;
+			opacity: 0;
+		}
+	}
+
+	@keyframes breath {
+		50% {
+			scale: 1.5;
+		}
+	}
+
+	body {
+		font-family: "Noto Sans SC", sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #f0f0f0;
+		text-align: center;
+	}
+
+	.container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
+
+</html>

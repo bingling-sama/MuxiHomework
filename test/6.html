@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>第六题</title>
+</head>
+
+<body>
+	<header>
+		<div class="brand">木犀前端</div>
+		<div class="placeholder"></div>
+		<div class="search">
+			<input type="text" placeholder="请输入关键字">
+			<button>搜索</button>
+		</div>
+		<a href="">主页</a>
+		<a href="">关于我们</a>
+		<a href="">文档</a>
+		<a href="">交流</a>
+	</header>
+	<main>
+		<h1>欢迎来到木犀前端</h1>
+		<div class="card">
+			<span class="title">登录</span>
+			<div class="login">
+				<span>姓名：</span>
+				<input type="text" placeholder="请输入用户名" />
+			</div>
+			<div class="login">
+				<span>密码：</span>
+				<input type="password" placeholder="请输入密码" />
+			</div>
+			<button>登录</button>
+			<button>注册</button>
+		</div>
+		<div id="back" class="back"><img src=" https://i.mij.rip/2024/10/13/3902bd88ac20d0757b0ef33c7cf91444.png">
+		</div>
+	</main>
+	<footer>
+		<h3>© 木犀团队</h3>
+	</footer>
+</body>
+
+<script>
+	var button = document.getElementById("back")
+	button.addEventListener("click", function () {
+		window.scrollTo(0, 0)
+	})
+</script>
+
+<style>
+	header {
+		width: 100vw;
+		height: 4rem;
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #cfcf95;
+	}
+
+	header a {
+		color: black;
+		text-decoration: none;
+		width: 5rem;
+	}
+
+	header .placeholder {
+		flex: auto
+	}
+
+	header .search {
+		flex: initial;
+		display: flex;
+		gap: 5px;
+	}
+
+	header .search input {
+		height: 1.5rem;
+		border: none;
+		border-radius: 1rem;
+	}
+
+	header .search button {
+		width: 3rem;
+		height: 1.5rem;
+		border: none;
+		border-radius: 1rem;
+	}
+
+	header .brand {
+		flex: none;
+		margin: auto 2rem;
+		width: 8rem;
+		height: 3rem;
+		line-height: 3rem;
+		font-weight: bold;
+		font-size: larger;
+		border: 2px solid black;
+		border-radius: 30px;
+	}
+
+	@media (max-width: 720px) {
+		header {
+			flex-direction: column;
+			justify-content: center;
+			height: 5rem;
+		}
+
+		header .brand {
+			border: none;
+			height: 2rem;
+			margin: 0;
+			line-height: 2rem;
+		}
+
+		header .placeholder {
+			display: none;
+		}
+
+		header a {
+			display: none;
+		}
+	}
+
+	main {
+		margin: 0;
+		padding: 4rem;
+		background-color: #e1deac;
+		height: 150vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+	}
+
+	main .back {
+		position: fixed;
+		right: 1rem;
+		bottom: 1rem;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		background-color: #f0f0f0;
+		cursor: pointer;
+		z-index: 1;
+	}
+
+	main .back img {
+		width: 2rem;
+		height: 2rem;
+		margin: .5rem;
+	}
+
+	main .card {
+		width: auto;
+		height: auto;
+		padding: 2rem;
+		border-radius: 20px;
+		background-color: #ececef;
+	}
+
+	main .card .title {
+		font-weight: bold;
+		font-size: larger;
+	}
+
+	main .card .login {
+		margin: .5rem 0;
+	}
+
+	main .card .login input {
+		height: 1.5rem;
+		border: none;
+		border-radius: 8px;
+	}
+
+	main .card button {
+		width: 5rem;
+		margin: 0 .5rem;
+		border: none;
+		border-radius: 5px;
+		background-color: #bebe7b;
+	}
+
+	footer {
+		position: fixed;
+		bottom: 0;
+		width: 100vw;
+	}
+
+	body {
+		font-family: "Noto Sans SC", sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #f0f0f0;
+		text-align: center;
+	}
+</style>
+
+</html>

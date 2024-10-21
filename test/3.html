@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>第三题</title>
+</head>
+
+<body>
+	<h1>第三题</h1>
+	<div class="container">
+		<button class="toggle btn">
+			<span class="bold">还真会</span>
+		</button>
+	</div>
+	<div id="drawer" class="drawer">
+		<div class="sidebar">
+			<span class="toggle bold">包会的</span>
+		</div>
+	</div>
+</body>
+
+<script>
+	var toggles = document.getElementsByClassName("toggle")
+	for (i = 0; i < toggles.length; i++) {
+		toggles[i].addEventListener("click", toggleDrawer)
+	}
+	function toggleDrawer() {
+		var drawer = document.getElementById("drawer")
+		drawer.classList.toggle("show")
+	}
+</script>
+
+<style>
+	.container {
+		height: 40vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.btn {
+		width: 4rem;
+		height: 3rem;
+		border: 2px solid #30c66a;
+		border-radius: 10% / 50%;
+		transition: all .5s ease-in-out;
+	}
+
+	.btn:hover {
+		background-color: #30c66a;
+	}
+
+	.bold {
+		font-weight: bold;
+		font-size: medium;
+	}
+
+	.drawer {
+		position: fixed;
+		top: 0;
+		height: 100vh;
+		width: 100vw;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 1s;
+		background-color: gray;
+	}
+
+	.sidebar {
+		position: fixed;
+		right: 0;
+		width: 0;
+		height: 100vh;
+		transition: width 1s;
+		background-color: #f0f0f0;
+	}
+
+	.show {
+		visibility: visible;
+		opacity: 50%;
+	}
+
+	.show .sidebar {
+		width: 30vw;
+	}
+
+	body {
+		font-family: "Noto Sans SC", sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #f0f0f0;
+		text-align: center;
+	}
+</style>
+
+</html>

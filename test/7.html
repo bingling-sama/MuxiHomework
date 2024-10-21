@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>第七题</title>
+</head>
+
+<body>
+	<div class="man">
+		<div class="up">·</div>
+		<div class="down"></div>
+	</div>
+	<div class="bean"></div>
+</body>
+
+
+<style>
+	.up {
+		width: 60px;
+		height: 30px;
+		border-radius: 50px 50px 0 0;
+		background-color: #feed39;
+		font-weight: bolder;
+		animation: up 1s linear infinite;
+	}
+
+	.down {
+		width: 60px;
+		height: 30px;
+		border-radius: 0 0 50px 50px;
+		background-color: #feed39;
+		animation: down 1s linear infinite;
+	}
+
+	.bean {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: #feed39;
+		animation: eat 1s linear infinite;
+	}
+
+	@keyframes up {
+		50% {
+			transform: rotate(-30deg);
+		}
+	}
+
+	@keyframes down {
+		50% {
+			transform: rotate(30deg);
+		}
+	}
+
+	@keyframes eat {
+		0% {
+			transform: translateX(100px);
+		}
+
+		100% {
+			transform: translateX(-20px);
+		}
+	}
+
+	body {
+		font-family: "Noto Sans SC", sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #f0f0f0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+</style>
+
+</html>
