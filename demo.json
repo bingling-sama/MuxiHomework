@@ -1,9 +1,0 @@
-{
-	"name": "foo",
-	"age": 18,
-	"married": true,
-	"languages": [
-		"Chinese",
-		"English"
-	]
-}
