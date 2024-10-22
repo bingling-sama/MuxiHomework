@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task6</title>
+</head>
+
+<body>
+	<h1>两边自适应，中间定宽</h1>
+	<div class="center-fixed">
+		<div class="r"></div>
+		<div class="y"></div>
+		<div class="b"></div>
+	</div>
+	<h1>两边定宽，中间自适应</h1>
+	<div class="side-fixed">
+		<div class="r"></div>
+		<div class="y"></div>
+		<div class="b"></div>
+	</div>
+</body>
+
+<style>
+	.center-fixed {
+		height: 60px;
+		width: 100vw;
+		display: grid;
+		grid-template-columns: auto 300px auto;
+	}
+
+	.side-fixed {
+		height: 60px;
+		width: 100vw;
+		display: grid;
+		grid-template-columns: 200px auto 200px;
+	}
+
+	.r {
+		background-color: red;
+	}
+
+	.y {
+		background-color: yellow;
+	}
+
+	.b {
+		background-color: blue;
+	}
+</style>
+
+</html>
