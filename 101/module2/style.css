@@ -205,7 +205,8 @@ main {
 	color: #f44336;
 }
 
-.hot>.grid>.active {
+.card>.round:hover,
+.hot>.grid>.class:hover {
 	background-color: #1dc091;
 	color: #ffffff;
 }
@@ -221,6 +222,7 @@ main {
 }
 
 .guess>.classes>div {
+	position: relative;
 	width: 10rem;
 	background-color: #f77b72;
 	display: flex;
@@ -239,19 +241,29 @@ main {
 	font-weight: 100;
 }
 
-.guess>.classes>.active {
+.guess>.classes>div:hover {
 	position: relative;
 	background-color: #f44336;
+	z-index: 1;
 }
 
-.guess>.classes>.active::before {
+.guess>.classes>div:hover::before {
+	transform: scaleY(1);
+}
+
+.guess>.classes>div::before {
 	content: "";
 	height: 40px;
 	width: 80px;
 	position: absolute;
 	top: -40px;
+	overflow: hidden;
+	transform-origin: bottom;
+	transform: scaleY(0);
+	transition: all .5s ease-in-out;
 	background-image: url("./assets/cats.png");
 	background-size: cover;
+	z-index: -1;
 }
 
 footer {
