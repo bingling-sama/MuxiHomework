@@ -3,7 +3,7 @@ var arrays = [[1, 2, 3], [4, 5], [6]]
 console.log(arrays.reduce((pre, cur) => pre.concat(cur), []))
 
 function loop(init, test, update, action) {
-	for (; test(init); init = update(init)) {
+	for (let ; test(init); init = update(init)) {
 		action(init)
 	}
 }
@@ -11,7 +11,7 @@ function loop(init, test, update, action) {
 loop(3, n => n > 0, n => n - 1, console.log)
 
 function everyLoop(arr, test) {
-	for (a of arr) {
+	for (let a of arr) {
 		if (!test(a)) return false
 	}
 	return true
@@ -145,7 +145,6 @@ class GroupIterator {
 	}
 
 	next() {
-		// Why TypeError: Cannot read properties of undefined (reading 'length')
 		if (this.index >= this.group.length) {
 			return { done: true }
 		}
@@ -153,10 +152,6 @@ class GroupIterator {
 		this.index++
 		return { value, done: false }
 	}
-}
-
-Group.prototype[Symbol.iterator] = () => {
-	return new GroupIterator(this)
 }
 
 for (let value of Group.from(["a", "b", "c"])) {

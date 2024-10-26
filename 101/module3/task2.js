@@ -31,7 +31,7 @@ console.log(isEven(-1));
  */
 function countBs(str) {
 	var count = 0
-	for (i = 0; i < str.length; i++) {
+	for (let i = 0; i < str.length; i++) {
 		if (str[i] == "B") count++
 	}
 	return count
@@ -47,7 +47,7 @@ console.log(countBs("BOB"))
  */
 function countChar(str, char) {
 	var count = 0
-	for (i = 0; i < str.length; i++) {
+	for (let i = 0; i < str.length; i++) {
 		if (str[i] == char) count++
 	}
 	return count

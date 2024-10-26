@@ -6,7 +6,7 @@ var isPalindrome = function (x) {
 	var s = x.toString()
 	var arr = s.split("")
 	var ret = ""
-	for (i = arr.length - 1; i >= 0; i--) {
+	for (let i = arr.length - 1; i >= 0; i--) {
 		ret += arr[i]
 	}
 	return s === ret

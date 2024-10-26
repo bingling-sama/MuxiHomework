@@ -1,6 +1,6 @@
 // function range(start, end) {
 // 	var arr = []
-// 	for (i = start; i <= end; i++) {
+// 	for (let i = start; i <= end; i++) {
 // 		arr.push(i)
 // 	}
 // 	return arr
@@ -18,11 +18,11 @@
 function range(start, end, step = 1) {
 	var arr = []
 	if (start <= end) {
-		for (i = start; i <= end; i += step) {
+		for (let i = start; i <= end; i += step) {
 			arr.push(i)
 		}
 	} else {
-		for (i = start; i >= end; i += step) {
+		for (let i = start; i >= end; i += step) {
 			arr.push(i)
 		}
 	}
@@ -39,7 +39,7 @@ console.log(range(5, 2, -1))
  */
 function sum(nums) {
 	var sum = 0
-	for (n of nums) {
+	for (let n of nums) {
 		sum += n
 	}
 	return sum
@@ -53,7 +53,7 @@ console.log(sum(range(1, 10)))
  */
 function reverseArray(arr) {
 	var n = []
-	for (i = arr.length - 1; i >= 0; i--) {
+	for (let i = arr.length - 1; i >= 0; i--) {
 		n.push(arr[i])
 	}
 	return n
@@ -68,7 +68,7 @@ console.log(myArray)
  * @param {number[]} arr 
  */
 function reverseArrayInPlace(arr) {
-	for (i = 0; i <= arr.length / 2; i++) {
+	for (let i = 0; i <= arr.length / 2; i++) {
 		[arr[i], arr[arr.length - 1 - i]] = [arr[arr.length - 1 - i], arr[i]]
 	}
 }
@@ -121,7 +121,7 @@ console.log(prepend(10, prepend(20, null)))
 
 function nth(list, index) {
 	var pointer = list
-	for (i = 0; i < index; i++) {
+	for (let i = 0; i < index; i++) {
 		pointer = list.rest
 	}
 	return pointer.value
@@ -140,7 +140,7 @@ function deepEqual(a, b) {
 	const kb = Object.keys(b)
 	if (ka.length !== kb.length) return false
 
-	for (key of ka) {
+	for (let key of ka) {
 		if (!deepEqual(a[key], b[key])) return false
 	}
 
