@@ -82,12 +82,74 @@ console.log(arrayValue)
  * @param {number[]} arr 
  */
 function arrayToList(arr) {
-	const [first, ...rest] = arr
-	function createNode(value, arr) {
-		const [next, ...rest] = arr
-		return { value: value, rest: createNode(next, rest) }
+	if (arr.length > 1) {
+		var [first, ...rest] = arr
+		return {
+			value: first,
+			rest: arrayToList(rest)
+		}
+	} else {
+		return {
+			value: arr[0],
+			rest: null
+		}
 	}
-	return createNode(first, rest)
 }
 
-console.log(arrayToList(1, 2, 3, 4, 5))
+console.log(arrayToList([1, 2, 3, 4, 5]))
+
+function listToArray(list, arr = []) {
+	if (list.rest == null) {
+		arr.push(list.value)
+		return arr
+	} else {
+		arr.push(list.value)
+		return listToArray(list.rest, arr)
+	}
+}
+
+console.log(listToArray(arrayToList([1, 2, 3, 4, 5])))
+
+function prepend(value, list) {
+	return {
+		value: value,
+		rest: list
+	}
+}
+
+console.log(prepend(10, prepend(20, null)))
+
+function nth(list, index) {
+	var pointer = list
+	for (i = 0; i < index; i++) {
+		pointer = list.rest
+	}
+	return pointer.value
+}
+
+console.log(nth(arrayToList([1, 2, 3]), 1))
+
+function deepEqual(a, b) {
+	if (a === b) return true
+	if (a === null || b === null || a === undefined || b === undefined) {
+		return a === b
+	}
+	if (typeof a !== typeof b) return false
+	if (typeof a !== "object" || typeof b !== "object") return a === b
+	const ka = Object.keys(a)
+	const kb = Object.keys(b)
+	if (ka.length !== kb.length) return false
+
+	for (key of ka) {
+		if (!deepEqual(a[key], b[key])) return false
+	}
+
+	return true
+}
+
+
+let obj = { here: { is: "an" }, object: 2 };
+let obj2 = { here: { is: "an" }, object: 2 }
+console.log(deepEqual(obj, obj));
+console.log(deepEqual(obj, { here: 1, object: 2 }));
+console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
