@@ -3,7 +3,7 @@ var arrays = [[1, 2, 3], [4, 5], [6]]
 console.log(arrays.reduce((pre, cur) => pre.concat(cur), []))
 
 function loop(init, test, update, action) {
-	for (let ; test(init); init = update(init)) {
+	for (; test(init); init = update(init)) {
 		action(init)
 	}
 }
