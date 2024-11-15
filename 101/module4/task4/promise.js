@@ -1,7 +1,19 @@
 function Promise_all(promises) {
 	return new Promise((resolve, reject) => {
 		// Your code here.
-	});
+		let results = [];
+		let pending = promises.length;
+		if (promises.length == 0) resolve(results);
+		promises.forEach((promise, i) => {
+			promise
+				.then(result => {
+					results[i] = result;
+					pending--;
+					if (pending == 0) resolve(results);
+				})
+				.catch(reject);
+		})
+	})
 }
 
 // Test code.
