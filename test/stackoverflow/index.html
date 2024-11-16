@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>StackOverflow</title>
+	<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@100..900&amp;display=swap">
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<header>
+		<div class="logo">StackOverflow</div>
+		<div class="tab">Products</div>
+		<div class="tab">OverflowAI</div>
+		<div class="search">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+				<!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+				<path
+					d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+			</svg>
+			<input type="text" name="" id="" placeholder="Search...">
+		</div>
+		<div class="avatar">
+			<img src="https://gravatar.com/userimage/209456059/a8384a5f7062fafb86d31328a2caabce.jpeg?size=128" alt="avatar">
+			<span>1</span>
+		</div>
+		<div class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+				<path
+					d="M121 32C91.6 32 66 52 58.9 80.5L1.9 308.4C.6 313.5 0 318.7 0 323.9L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-92.1c0-5.2-.6-10.4-1.9-15.5l-57-227.9C446 52 420.4 32 391 32L121 32zm0 64l270 0 48 192-51.2 0c-12.1 0-23.2 6.8-28.6 17.7l-14.3 28.6c-5.4 10.8-16.5 17.7-28.6 17.7l-120.4 0c-12.1 0-23.2-6.8-28.6-17.7l-14.3-28.6c-5.4-10.8-16.5-17.7-28.6-17.7L73 288 121 96z" />
+			</svg>
+		</div>
+		<div class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+				<path
+					d="M400 0L176 0c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8L24 64C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9L192 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l192 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-26.1 0C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24L446.4 64c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112l84.4 0c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6l84.4 0c-5.1 66.3-31.1 111.2-63 142.3z" />
+			</svg>
+		</div>
+		<div class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+				<path
+					d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+			</svg>
+		</div>
+		<div class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+				<path
+					d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+			</svg>
+		</div>
+	</header>
+	<main>
+		<div class="sidebar">
+			<div class="bar">
+				<div class="tabs">
+					<div class="tab">
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+						</svg>
+						<span>Home</span>
+					</div>
+					<div class="tab">
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM105.8 229.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L216 328.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM160 416a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+						</svg>
+						<span>Questions</span>
+					</div>
+					<div class="tab">
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M345 39.1L472.8 168.4c52.4 53 52.4 138.2 0 191.2L360.8 472.9c-9.3 9.4-24.5 9.5-33.9 .2s-9.5-24.5-.2-33.9L438.6 325.9c33.9-34.3 33.9-89.4 0-123.7L310.9 72.9c-9.3-9.4-9.2-24.6 .2-33.9s24.6-9.2 33.9 .2zM0 229.5L0 80C0 53.5 21.5 32 48 32l149.5 0c17 0 33.3 6.7 45.3 18.7l168 168c25 25 25 65.5 0 90.5L277.3 442.7c-25 25-65.5 25-90.5 0l-168-168C6.7 262.7 0 246.5 0 229.5zM144 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
+						</svg>
+						<span>Tags</span>
+					</div>
+				</div>
+				<div class="tabs">
+					<div class="tab">
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />
+						</svg>
+						<span>Saves</span>
+					</div>
+					<div class="tab">
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z" />
+						</svg>
+						<span>Users</span>
+					</div>
+					<div class="tab">
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M48 0C21.5 0 0 21.5 0 48L0 464c0 26.5 21.5 48 48 48l96 0 0-80c0-26.5 21.5-48 48-48s48 21.5 48 48l0 80 96 0c26.5 0 48-21.5 48-48l0-416c0-26.5-21.5-48-48-48L48 0zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm112-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM80 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM272 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z" />
+						</svg>
+						<span>Companies</span>
+					</div>
+				</div>
+				<div class="tabs">
+					<div class="category">
+						<span>LABS</span>
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+						</svg>
+					</div>
+					<div class="tab">
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M176 56l0 40 160 0 0-40c0-4.4-3.6-8-8-8L184 48c-4.4 0-8 3.6-8 8zM128 96l0-40c0-30.9 25.1-56 56-56L328 0c30.9 0 56 25.1 56 56l0 40 0 32 0 352-256 0 0-352 0-32zM64 96l32 0 0 384-32 0c-35.3 0-64-28.7-64-64L0 160c0-35.3 28.7-64 64-64zM448 480l-32 0 0-384 32 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64z" />
+						</svg>
+						<span>Jobs</span>
+					</div>
+					<div class="tab">
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M64 0C28.7 0 0 28.7 0 64L0 352c0 35.3 28.7 64 64 64l96 0 0 80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416 448 416c35.3 0 64-28.7 64-64l0-288c0-35.3-28.7-64-64-64L64 0z" />
+						</svg>
+						<span>Discussions</span>
+					</div>
+				</div>
+				<div class="block">
+					<div class="category">
+						<span>COLLECTIVES</span>
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+						</svg>
+					</div>
+					<span class="text">Communities for your favorite technologies. <u>Explore all Collectives</u></span>
+				</div>
+				<div class="block">
+					<div class="category">
+						<span>TEAMS</span>
+						<svg xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+							<path
+								d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+						</svg>
+					</div>
+					<div class="card">
+						<div class="title">overflowAI</div>
+						<span class="text">
+							<b>Now available on Stack Overflow for Teams!</b>
+							AI features where you work: search, IDE, and chat.
+						</span>
+						<div class="button">Learn more</div>
+						<div class="button">Explore Teams</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="header">
+				<div class="title">Is the long, blue WindowsDebugLauncher.exe message that prints when I run C/C++ code in VS
+					Code an error?
+				</div>
+				<div class="button">Ask Question</div>
+			</div>
+			<div class="thread">
+				<div class="comment">
+					<div class="actions">
+						<div class="prev">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+								<path
+									d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l256 0c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z" />
+							</svg>
+						</div>
+						<div class="now">0</div>
+						<div class="next">
+							<svg xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+								<path
+									d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+							</svg>
+						</div>
+					</div>
+					<div class="context">
+						<p>When I run my C program on VS Code through cpptools (the Microsoft C++ extension for VS Code), I always
+							get this long,
+							blue-colored message in the terminal. Sometimes the code runs and sometimes it doesn't run. It looks like
+							an error
+							message(?)- especially the part that says "stderror". I tried to uninstall vs code and then reinstall it
+							but it didn't
+							help. Is this an error message? If so, how can I fix the problem?
+						</p>
+						<p>This is the message:
+							'c:\Users\me\.vscode\extensions\ms-vscode.cpptools-1.20.5-win32-x64\debugAdapters\bin\WindowsDebugLauncher.exe'
+							'--stdin=Microsoft-MIEngine-In-2hzunawp.5jd' '--stdout=Microsoft-MIEngine-Out-4c1l0eot.hlz'
+							'--stderr=Microsoft-MIEngine-Error-f1z5ijur.qi1' '--pid=Microsoft-MIEngine-Pid-0dxp5msa.4og'
+							'--dbgExe=C:\MinGW\bin\gdb.exe' '--interpreter=mi'
+						</p>
+						<p>
+							Here's what it looks like on my screen:
+						</p>
+						<img src="https://ice.frostsky.com/2024/11/16/6ac8958f5b4a602c3f83d27e955f8cd4.png" alt="img">
+						<p>
+							A similar thing happens when I try to run C++ code using cpptools.
+						</p>
+						<div class="footer">
+							<div class="actions">Share Edit Follow</div>
+							<div>
+								<span class="time">edited 19 mins ago</span>
+								<div class="author">
+									<img src="https://ice.frostsky.com/2024/11/16/04201a3db13ec1cefac0e51f421a0484.png" alt=""
+										class="avatar">
+									<div class="details">
+										<div class="fore">
+											<img src="https://ice.frostsky.com/2024/11/16/04201a3db13ec1cefac0e51f421a0484.png" alt=""
+												class="avatar">
+											<div class="info">
+												<div class="name">starball</div>
+												<div class="status"><b>46.8k</b> 28 173 822
+												</div>
+											</div>
+										</div>
+										<div class="description">Vote! <i>Voting is a pillar of this system.</i>
+											Did you find something useful* to you? Upvote it!
+											Was something actively not useful to you? Downvote it.
+											Even if you haven't unlocked full voting <i>privileges</i>, still
+											C..
+											<i>on-topic</i>
+										</div>
+									</div>
+									<div class="info">
+										<div class="name">starball</div>
+										<div class="status"><b>46.8k</b> 28 173 822
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="related">
+					<div class="card">
+						<div class="title">The Overflow Blog</div>
+						<div class="link">A student of Geoff Hinton, Yann LeCun, and Jeff Dean explains where AI is headed</div>
+						<div class="link">Meet the guy responsible for building the Call of Duty game engine</div>
+						<div class="title">Featured on Meta</div>
+						<dov class="link">More network sites to see advertising test</dov>
+						<div class="link">We’re (finally!) going to the cloud!</div>
+					</div>
+					<div class="linked">
+						<h3>Linked</h3>
+						<div class="link">have i correctly install c in my vs code?</div>
+						<div class="link">VS Code 1.88 inserts ^C before running a debug configuration again. Why?</div>
+						<div class="link">Are these things that appear in vscode terminal okay? (when compiling c++)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="logo">
+			<svg aria-hidden="true" class="native svg-icon iconGlyphMd" width="32" height="37" viewBox="0 0 32 37">
+				<path fill="#BCBBBB" d="M26 33v-9h4v13H0V24h4v9z"></path>
+				<path fill="#F48024"
+					d="m21.5 0-2.7 2 9.9 13.3 2.7-2zM26 18.4 13.3 7.8l2.1-2.5 12.7 10.6zM9.1 15.2l15 7 1.4-3-15-7zm14 10.79.68-2.95-16.1-3.35L7 23zM23 30H7v-3h16z">
+				</path>
+			</svg>
+		</div>
+		<ul>
+			<p>STACK OVERFLOW</p>
+			<li>Questions</li>
+			<li>Help</li>
+			<li>Chat</li>
+		</ul>
+		<ul>
+			<p>PRODUCTS</p>
+			<li>Teams</li>
+			<li>Advertising</li>
+			<li>Talent</li>
+		</ul>
+		<ul>
+			<p>COMPANY</p>
+			<li>About</li>
+			<li>Press</li>
+			<li>Work Here</li>
+			<li>Legal</li>
+			<li>Privacy Policy</li>
+			<li>Terms of Service</li>
+			<li>Contact Us</li>
+			<li>Cookie Settings</li>
+			<li>Cookie Policy</li>
+		</ul>
+		<ul>
+			<p>STACK EXCHANGE NETWORK</p>
+			<li>Technology</li>
+			<li>Culture & recreation</li>
+			<li>Life & arts</li>
+			<li>Science</li>
+			<li>Professional</li>
+			<li>Business</li>
+			<li></li>
+			<li>API</li>
+			<li>Data</li>
+		</ul>
+		<div class="contact">
+			<ul>
+				<li>Blog</li>
+				<li>Facebook</li>
+				<li>Twitter</li>
+				<li>LinkedIn</li>
+				<li>Instagram</li>
+			</ul>
+			<p>
+				Site design / logo © 2024 Stack Exchange Inc; user contributions licensed under CC BY-SA . rev 2024.11.13.18534
+			</p>
+		</div>
+	</footer>
+</body>
+
+</html>

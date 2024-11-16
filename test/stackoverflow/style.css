@@ -1,0 +1,476 @@
+body {
+	position: relative;
+	margin: 0;
+	font-family: 'Noto Sans SC';
+}
+
+header {
+	border-top: 3px solid #e7700d;
+	border-bottom: 1px solid gainsboro;
+	width: 80%;
+	height: 3rem;
+	position: fixed;
+	top: 0;
+	padding: 0 10%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: white;
+	z-index: 10;
+}
+
+header .logo {
+	height: 100%;
+	width: 10rem;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .logo:hover {
+	background-color: #dfdfdf;
+	border-radius: 8px;
+}
+
+header .tab {
+	font-size: small;
+	font-weight: 200;
+	margin: 4px;
+	padding: 8px;
+}
+
+header .tab:hover {
+	background-color: #dfdfdf;
+	border-radius: 16px;
+}
+
+header .search {
+	position: relative;
+	flex-grow: 1;
+	padding: 4px;
+}
+
+header .search svg {
+	top: 11px;
+	left: 12px;
+	position: absolute;
+	width: 1rem;
+}
+
+header .search input {
+	height: 1.5rem;
+	width: 90%;
+	padding-left: 2rem;
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+}
+
+header .search input:focus {
+	outline-offset: 4px;
+	outline-color: #1B75D0;
+}
+
+header .avatar {
+	height: 100%;
+	width: 4rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+header .avatar:hover {
+	background-color: #dfdfdf;
+	border-radius: 8px;
+}
+
+header .avatar img {
+	width: 2rem;
+}
+
+header .icon {
+	height: 100%;
+	width: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+header .icon svg {
+	width: 1.25rem;
+}
+
+header .icon:hover {
+	background-color: #dfdfdf;
+	border-radius: 8px;
+}
+
+main {
+	margin-top: 3rem;
+	height: 150vh;
+	width: 80%;
+	padding: 0 10%;
+	display: flex;
+	flex-direction: row;
+}
+
+main .sidebar {
+	position: relative;
+	width: 10rem;
+	height: 100%;
+	border-right: 1px solid #dfdfdf;
+}
+
+main .sidebar .bar {
+	position: sticky;
+	top: 3rem;
+	bottom: 0;
+	height: fit-content;
+	display: grid;
+	grid-template-rows: 1/6 1/6 1/6 1/6 1/3;
+}
+
+main .sidebar .bar .tabs {
+	margin: 1rem 0;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+main .sidebar .bar .tabs .tab {
+	padding: .5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	gap: 4px;
+}
+
+main .sidebar .bar .tabs .tab:hover {
+	background-color: #dfdfdf;
+}
+
+main .sidebar .bar .tabs .tab svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+main .sidebar .bar .tabs .tab:hover span {
+	font-weight: bold;
+}
+
+main .sidebar .bar .block {
+	margin: 1rem 0;
+}
+
+main .sidebar .bar .category {
+	height: 2rem;
+	display: flex;
+	padding: 0 .5rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main .sidebar .bar .category svg {
+	width: 1.25rem;
+	height: 1.25rem;
+	cursor: pointer;
+}
+
+main .sidebar .bar .card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: .5rem;
+}
+
+main .sidebar .bar .card .title {
+	font-weight: 500;
+	font-size: large;
+	margin: .5rem 0;
+}
+
+main .sidebar .bar .card .button {
+	background-color: #E7700D;
+	width: 100%;
+	height: 1.5rem;
+	margin: 4px;
+	text-align: center;
+	color: white;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: small;
+}
+
+.text {
+	font-size: small;
+	font-weight: 200;
+}
+
+main .content {
+	width: inherit;
+}
+
+main .content .header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+main .content .header .title {
+	font-size: large;
+	margin: 1rem;
+	width: 50rem;
+}
+
+main .content .header .button {
+	text-align: center;
+	width: 8rem;
+	padding: .5rem;
+	border: 1px solid #dfdfdf;
+	border-radius: 8px;
+	background-color: #1B75D0;
+	color: white;
+	cursor: pointer;
+}
+
+main .content .header .button:hover {
+	background-color: #256cb4;
+}
+
+main .content .thread {
+	display: grid;
+	grid-template-columns: 7fr 3fr;
+}
+
+main .content .thread .comment {
+	display: grid;
+	grid-template-columns: 3rem auto;
+}
+
+main .content .thread .comment .actions {
+	display: grid;
+	grid-template-rows: 2rem 2rem 2rem;
+	padding: .5rem;
+}
+
+main .content .thread .comment .actions .now {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+
+main .content .thread .comment .actions .prev,
+main .content .thread .comment .actions .next {
+	border: 1px solid #c8c8c8;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+main .content .thread .comment .actions .prev svg,
+main .content .thread .comment .actions .next svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+main .content .thread .comment .actions .prev:hover,
+main .content .thread .comment .actions .next:hover {
+	background-color: #FAECC6;
+}
+
+main .content .thread .comment .context {
+	font-weight: 300;
+}
+
+main .content .thread .comment .context img {
+	max-width: 100%;
+}
+
+main .content .thread .comment .context .footer {
+	display: grid;
+	grid-template-columns: auto 10rem;
+}
+
+main .content .thread .comment .context .footer .actions {
+	font-size: .8rem;
+}
+
+main .content .thread .comment .context .footer .time {
+	font-weight: 200;
+	font-size: small;
+}
+
+main .content .thread .comment .context .footer .author {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+main .content .thread .comment .context .footer .avatar {
+	width: 2rem;
+	height: 2rem;
+}
+
+main .content .thread .comment .context .footer .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+main .content .thread .comment .context .footer .info .name,
+main .content .thread .comment .context .footer .info .status {
+	padding: 0 .5rem;
+	font-size: .9rem;
+}
+
+main .content .thread .comment .context .footer .details {
+	background-color: #3B4045;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16rem;
+	height: 10rem;
+	transform: scale(0);
+	transform-origin: top left;
+	transition: transform .5s 1s ease-in;
+	overflow: hidden;
+}
+
+main .content .thread .comment .context .footer .author:hover .details {
+	transform: scale(1);
+}
+
+main .content .thread .comment .context .footer .details .fore {
+	display: flex;
+	padding: .5rem;
+}
+
+main .content .thread .comment .context .footer .details .description {
+	padding: 0 .25rem;
+	font-size: .7rem;
+}
+
+main .content .thread .comment .context .footer .details .fore .avatar {
+	width: 4rem;
+	height: 4rem;
+}
+
+main .content .thread .related {
+	padding: .5rem;
+}
+
+main .content .thread .related .card {
+	display: grid;
+}
+
+main .content .thread .related .card .title {
+	background-color: #FAECC6;
+	padding: .5rem;
+	font-weight: 600;
+	font-size: small;
+}
+
+main .content .thread .related .card .link {
+	background-color: #FDF7E7;
+	color: #404448;
+	font-weight: 300;
+	font-size: small;
+	padding: .5rem;
+	cursor: pointer;
+}
+
+main .content .thread .related .card .link:hover {
+	color: #0c0d0e;
+}
+
+main .content .thread .related .linked {
+	font-weight: 300;
+	display: grid;
+	gap: .25rem;
+}
+
+main .content .thread .related .linked h3 {
+	font-weight: 400;
+}
+
+main .content .thread .related .linked .link {
+	color: #1B75D0;
+	font-size: .8rem;
+	cursor: pointer;
+}
+
+main .content .thread .related .linked .link:hover {
+	color: #256cb4;
+}
+
+footer {
+	background-color: #0c0d0e;
+	color: white;
+	height: 20rem;
+	width: 100%;
+	position: relative;
+	display: grid;
+	grid-template-columns: 2fr 2fr 2fr 2fr 3fr 4fr;
+}
+
+footer .logo {
+	position: relative;
+}
+
+footer .logo svg {
+	position: absolute;
+	cursor: pointer;
+	top: 1rem;
+	right: 1rem;
+}
+
+footer ul {
+	list-style: none;
+}
+
+footer ul p {
+	font-size: small;
+	font-weight: bold;
+}
+
+footer ul li {
+	font-size: smaller;
+	font-weight: 100;
+	cursor: pointer;
+}
+
+footer ul li:hover {
+	text-decoration-line: underline;
+}
+
+footer .contact {
+	position: relative;
+}
+
+footer .contact ul {
+	padding: 0;
+}
+
+footer .contact ul li {
+	display: inline-block;
+	text-decoration-line: none;
+	margin: 0 .5rem;
+}
+
+footer .contact p {
+	position: absolute;
+	bottom: 1rem;
+	font-weight: 100;
+	font-size: smaller;
+}
